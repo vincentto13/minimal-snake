@@ -14,6 +14,6 @@ It was inspired by (found somewhere in the internet) C+64 version of snake. Mine
 
 #### Demo
 <p align="center">
-![Demo](https://raw.githubusercontent.com/vincentto13/minimal-snake/master/demo.gif)
+<img src="https://raw.githubusercontent.com/vincentto13/minimal-snake/master/demo.gif">
 </p>
 
