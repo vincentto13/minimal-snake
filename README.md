@@ -1,6 +1,6 @@
-# Mini C++ Snake
+## Mini C++ Snake
 Minimal Snake written in C++
 
-# Demo
+#### Demo
 ![Demo](https://raw.githubusercontent.com/vincentto13/minimal-snake/master/demo.gif)
 
