@@ -10,7 +10,7 @@ still can be shrinked but as for now its:
 644
 ```
 
-It was inspired by (found somewhere in the internet) C+64 version of snake. Mine is not that small... yet :blink: 
+It was inspired by (found somewhere in the internet) C+64 version of snake. Mine is not that small... yet ::blink:: 
 
 #### Demo
 ![Demo](https://raw.githubusercontent.com/vincentto13/minimal-snake/master/demo.gif)
