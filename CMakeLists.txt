@@ -15,5 +15,5 @@ endif()
 SET(CMAKE_CXX_FLAGS_RELEASE "-s -Os -fno-rtti")
 SET(CMAKE_CXX_FLAGS_DEBUG  "-O0 -g")
 
-add_executable(mini-snake snake.min.cpp)
+add_executable(mini-snake snake.571.min.cpp)
 target_link_libraries(mini-snake ${CURSES_LIBRARIES})
