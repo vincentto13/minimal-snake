@@ -10,10 +10,10 @@ struct h{int a,b;}; int c,x,y,k,M,N,Q,v,u=-1;
 int main()
 {
     std::list<h>s;
-    initscr();
+    auto E=initscr();
     noecho();
-    nodelay(stdscr,1);
-    getmaxyx(stdscr,N,M);
+    nodelay(E,1);
+    getmaxyx(E,N,M);
     x=M/2+5;y=N/2;
     for(;k++<5;)W(y,x);
     X
