@@ -1,4 +1,3 @@
-<meta property="og:image" content="https://raw.githubusercontent.com/vincentto13/minimal-snake/master/demo.gif" />
 ## Mini C++ Snake
 This is a try to write minimal Snake game (best known from old cellphones) written in C++. That
 is functional, and works in linux terminal The code still can be shrinked but as for now it is:
