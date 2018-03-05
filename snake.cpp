@@ -3,42 +3,40 @@
 #include <stdlib.h>
 
 #define L mvaddch
-#define putX L(rand()%N,rand()%M,'X');mvprintw(0,0,"Score: %d",Q++);
-#define P std::pair<int,int>
-#define W(S,y,x){s.push_##S(P(y,x));L(y,x,'O');}
+#define X L(rand()%(N-1)+1,rand()%M,88);mvprintw(0,0,"%d",Q++);
+#define W(y,x){s.push_front({y,x});L(y,x,79);}
 
-int k,M,N,Q,dy,dx=-1;
+struct h{int a,b;}; int c,x,y,k,M,N,Q,v,u=-1;
 int main()
 {
-    std::list<P>s;
-    initscr();
-    cbreak();
+    std::list<h>s;
+    auto E=initscr();
     noecho();
-    nodelay(stdscr,TRUE);
-    getmaxyx(stdscr,N,M);
-    int x=M/2,y=N/2;
-    for(k=0;k<5;k++)W(back,y,x+k);
-    putX
-    while(1){
-        x+=dx;
-        y+=dy;
+    nodelay(E,1);
+    getmaxyx(E,N,M);
+    x=M/2+5;y=N/2;
+    for(;k++<5;)W(y,x);
+    X
+    for(;;){
+        x+=u;
+        y+=v;
         x=x>=M?x=0:x<0?x=M-1:x;
-        y=y>=N?y=0:y<1?y=N-1:y;
-        char c=mvinch(y,x)&A_CHARTEXT;
-        W(front,y,x);
-        if(c=='X'){putX}
-        else if(c!=' ')
-            return Q;
+        y=y>=N?y=1:y<1?y=N-1:y;
+        c=mvinch(y,x)&127;
+        W(y,x);
+        if(c==88){X}
+        else if(c!=32)
+            break;
         else
         {
-            P z=s.back();
+            h z=s.back();
             s.pop_back();
-            L(z.first,z.second,' ');
+            L(z.a,z.b,32);
         }
         if ((k=getch())>-1)
         {
-            dy=k=='w'?-1:k=='s'?1:0;
-            dx=k=='a'?-1:k=='d'?1:0;
+            v=k=='w'?-1:k=='s'?1:0;
+            u=k=='a'?-1:k=='d'?1:0;
         }
         napms(99);
     }
