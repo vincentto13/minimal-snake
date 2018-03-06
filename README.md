@@ -4,10 +4,10 @@ is functional, and works in linux terminal The code still can be shrinked but as
 
 ```sh
 > wc snake.min.cpp
-  8  25 669 snake.min.cpp
+  7  23 567 snake.min.cpp
   
 > tr -d '[:space:] ' < snake.min.cpp | wc -c
-644
+544
 ```
 
 It was inspired by (found somewhere in the internet) C+64 version of snake. Mine is not that small... yet :wink:
